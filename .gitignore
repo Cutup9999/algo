@@ -1,3 +1,19 @@
+# MinKi Personal
+*.suo
+*.db
+*.sln
+*.pdb
+*.vcxproj
+*.tlog
+*.ipch
+*.ilk
+*.opendb
+*.filters
+*.user
+*.log
+*.idb
+
+
 # Prerequisites
 *.d
 
