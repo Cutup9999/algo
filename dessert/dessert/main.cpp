@@ -198,7 +198,6 @@ void Repeat(const long long &index)
 // -------------------------------------------------------------------------
 int main(void)
 {
-	
 	std::cin >> inputData;
 	memset(gBuffer, 0, MaxSize);
 
