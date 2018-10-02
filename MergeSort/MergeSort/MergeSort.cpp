@@ -1,3 +1,7 @@
+/*
+merge sort
+https://www.acmicpc.net/problem/2751
+*/
 #include <iostream>
 #include <vector>
 #include <memory.h>
@@ -9,6 +13,7 @@ vector<int> v;
 
 void merge(int leftStart, int leftEnd, int rightStart, int rightEnd)
 {
+	int totalCount = leftEnd - leftStart + 1 + rightEnd - rightStart + 1;
 	int l = leftStart;
 	int r = rightStart;
 	vector<int> temp;
@@ -16,7 +21,7 @@ void merge(int leftStart, int leftEnd, int rightStart, int rightEnd)
 	// 왼쪽과 오른쪽을 비교하면서 작은 거 순서대로 temp에 넣어준다.
 	while (l <= leftEnd && r <= rightEnd)
 	{
-		if(v[l] < v[r])
+		if (v[l] < v[r])
 		{
 			temp.push_back(v[l]);
 			l++;
@@ -81,19 +86,15 @@ int main(void)
 	{
 		int data = 0;
 		cin >> data;
-		
+
 		v.push_back(data);
 	}
 
 	mergeSort(0, inputCount - 1);
 
-	//for_each(v.begin(), v.end(), [](int &value) {
-	//	cout << value << " ";
-	//});
-	for (int vLoop = 0; vLoop < v.size(); vLoop++)
-	{
-		cout << v[vLoop] << "\n";
-	}
+	for_each(v.begin(), v.end(), [](int &value) {
+		cout << value << "\n";
+	});
 
 	return 0;
 }
