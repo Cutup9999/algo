@@ -46,6 +46,9 @@ void binarySearch(const long long start, const long long end, const long long se
 		// 그럼 이 과정으로 들어와서 다음 이진탐색을 하지만, 범위는 6 ~ 6가 된다.
 		// 따라서 mid는 6가 되고 얻는 결과는 4이 된다.
 		// 이 경우 최적의 높이는 5가 아니라 6이므로 6을 저장해둬야된다는 것이다.
+		//
+		// result값이 높을수록 최적! 왜냐하면, 낮은 높이로 나무를 자르면
+		// 목표 길이보다 남는거니까.
 		if (result < mid)
 			result = mid;
 
