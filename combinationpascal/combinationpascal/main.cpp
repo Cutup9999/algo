@@ -1,4 +1,7 @@
 /*
+https://www.acmicpc.net/problem/2407
+백준은 풀려면 큰 수 곱셈/나눗셈 처리하는 것을 따로 만들어야한다.
+
 파스칼의 삼각형과 조합 (combinationpascal.cpp)
 
 문제
@@ -34,7 +37,7 @@ int main(void)
 	unsigned long long result = 1;
 
 	// 시작은
-	while (nLoop >= n - r || rLoop <= r)
+	while (nLoop > n - r || rLoop <= r)
 	{
 		result *= nLoop;
 
